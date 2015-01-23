@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Trending Time</string>
+
+    <!--
+        the watch face UI seems to hold 7 trending topics legibly. this is the optimal number of topics to show.
+        any more starts to bleed into the chin and peek cards for square watch faces,
+        or gets cut off in the corners of the round watch face.
+    -->
+</resources>
