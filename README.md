@@ -4,7 +4,7 @@
 ![Trending Time for Android Wear displays the latest trending topics from Twitter - right on your wrist!](https://dl.dropboxusercontent.com/u/12019700/glass-dev/tester-images/TrendingTimePreview.png) ![Trending Time for Android Wear logo](https://dl.dropboxusercontent.com/u/12019700/glass-dev/tester-images/TrendingTime-logo.png) 
 
 ### Genesis
-I built Trending Time as a teaching tool for watch face development and also as an entertainment utility - the stuff that pops up throughout the day cracks me up. The lesson here is that watch faces don't always have to be all about expressing the time itself - the APIs provide the faciliy to do this easily. 
+I built Trending Time as a teaching tool for watch face development and also as an entertainment utility - the stuff that pops up throughout the day cracks me up. The lesson here is that watch faces don't always have to be all about expressing the time itself - the APIs provide the facility to do this easily. The trick is manipulating the [WatchfaceService.Engine] (https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html) lifecycle, specifically calling _invalidate()_ within the onPropertiesChanged handler to force a redraw. 
 
 In this implmentation, pulling data into a watch face is the takeaway. So the re-drawing of the screen with fresh data according to when data becomes available is more dependent on the visibility state of the watch rather than some hard-coded timer or tick or animation loop.
 
