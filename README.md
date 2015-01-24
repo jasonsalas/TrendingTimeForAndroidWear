@@ -17,6 +17,8 @@ Trending Time was build with [Android Studio v.1.0.2](http://developer.android.c
 
 Trending Time uses a custom proxy web handler hosted on Google App Engine to return the latest trending topics. The app uses the [Data API](http://developer.android.com/training/wearables/data-layer/index.html) to sync fresh trending topics between the phone and watch. In the wearable app, data is written to/pulled from [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html). [Temboo's library for Twitter](https://www.temboo.com/library/Library/Twitter/) calling the [Place API](https://www.temboo.com/library/Library/Twitter/Trends/Place/), is used to handle the required OAuth 1.0a credentials. In Version 1.0, the **'USA'** region is hard-coded to pull trending topics from there. 
 
+You can find out more about the data communication flow [on the project's wiki](https://github.com/jasonsalas/TrendingTime/wiki/Data-communications-architecture).
+
 ### Genesis
 I built Trending Time as a teaching tool for watch face development and also as an entertainment utility - the stuff that pops up throughout the day cracks me up and is often extremely informative. This type of quick-hit snapshot of what's happening in the world is precisely the type of UX that wearables rock at delivering. The key lesson here is that watch faces don't always have to be about expressing time itself. In this case, the time is actually secondary, being a data-driven utility. 
 
