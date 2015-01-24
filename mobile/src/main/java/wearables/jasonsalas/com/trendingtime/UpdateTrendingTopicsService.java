@@ -34,7 +34,7 @@ public class UpdateTrendingTopicsService extends Service implements GoogleApiCli
     * */
 
     private static final String PATH = "/trendingtopics";
-    private static final String URL = "CUSTOMPROXYURL";
+    private static final String URL = "CUSTOMPROXYURL";   // replace this value with your own URL
     private static final String TAG = "TrendingTime";
 
     GoogleApiClient googleApiClient;
