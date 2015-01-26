@@ -19,6 +19,9 @@ Trending Time uses a custom proxy web handler hosted on Google App Engine to ret
 
 You can find out more about the data communication flow [on the project's wiki](https://github.com/jasonsalas/TrendingTime/wiki/Data-communications-architecture).
 
+### Slide deck
+[Check out my tech talk](https://docs.google.com/presentation/d/1x8rY0z0H2k6EtFqw-ayI_4LHU2eFdgb5fWLaOKjj8Zs/present?slide=id.p) on about the lessons learned from [building a data-driven watch face](http://www.slideshare.net/jasonsalas/trending-time-datadriven-watch-face-development-for-android-wear) for Android Wear.
+
 ### Genesis
 I built Trending Time as a teaching tool for watch face development and also as an entertainment utility - the stuff that pops up throughout the day cracks me up and is often extremely informative. This type of quick-hit snapshot of what's happening in the world is precisely the type of UX that wearables rock at delivering. The key lesson here is that watch faces don't always have to be about expressing time itself. In this case, the time is actually secondary, being a data-driven utility. 
 
