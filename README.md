@@ -3,6 +3,14 @@
 
 ![Trending Time for Android Wear displays the latest trending topics from Twitter - right on your wrist!](https://dl.dropboxusercontent.com/u/12019700/glass-dev/tester-images/TrendingTimePreview.png) ![Trending Time for Android Wear logo](https://dl.dropboxusercontent.com/u/12019700/glass-dev/tester-images/TrendingTime-logo.png) 
 
+### Usage
+Here's how to use Trending Time once you've built (or installed) it: 
+* Launch the **Trending Time** app on your paired smartphone and tap the **"Start updater"** button, which activates updates and syncs them with your watch.
+* You can safely close the app once the updater is running. If you need to stop updates, just launch the mobile app again and tap **"Stop updater"**.
+* Select the **"Trending Time"** watch face on your smartwatch or from the Android Wear companion application.
+
+The updater process fires once per hour (inexactly) by way of an [AlarmManager](http://developer.android.com/reference/android/app/AlarmManager.html), but you can configure the code to check for updates more or less frequently as you wish.
+
 ### Download from Google Play
 If you'd just like to install and use the app, you can [install it from Google Play](https://play.google.com/store/apps/details?id=wearables.jasonsalas.com.trendingtime) onto your paired Android phone. The APK includes the wearable app, which is automatically pushed to your watch moments after you install the mobile app. The watch face will then be available in the watch face chooser in a few minutes.
 
@@ -26,15 +34,6 @@ You can find out more about the data communication flow [on the project's wiki](
 I built Trending Time as a teaching tool for watch face development and also as an entertainment utility - the stuff that pops up throughout the day cracks me up and is often extremely informative. This type of quick-hit snapshot of what's happening in the world is precisely the type of UX that wearables rock at delivering. The key lesson here is that watch faces don't always have to be about expressing time itself. In this case, the time is actually secondary, being a data-driven utility. 
 
 The trick is manipulating the [WatchfaceService.Engine](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html) lifecycle, specifically calling [View.invalidate()](https://developer.android.com/reference/android/view/View.html#invalidate()) within the [onPropertiesChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged(android.os.Bundle)) handler to force a redraw of the screen. This is less draining on the battery overall that a time-based redraw heuristic. So the re-drawing of the screen with fresh data according to when data becomes available is more dependent on the visibility state of the watch rather than some hard-coded timer or tick or animation loop.
-
-### Usage
-Here's how to use Trending Time once you've built (or installed) it: 
-* Select the **"Trending Time"** watch face on your smartwatch or from the Android Wear companion application
-* Launch the Trending Time app on your paired smartphone and tap the **"Start updater"** button, which activates updates and syncs them with your watch
-* You can safely close the app once the updater is running
-* If you need to stop updates, just launch the mobile app again and tap **"Stop updater"**
-
-The updater process fires once per hour (inexactly) by way of an [AlarmManager](http://developer.android.com/reference/android/app/AlarmManager.html), but you can configure the code to check for updates more or less frequently as you wish.
 
 ### Future development plans
 Other features in the works include:
